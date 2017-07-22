@@ -101,7 +101,8 @@
   <div class="item item-avatar">
     <img ng-src="{{package.img}}">
     <h2>Marty McFly</h2>
-    <p>November 05, 1955</p>
+    <!-- <p>November 05, 1955</p> -->
+    <p>Payout: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; 55 </strong> </p>
   </div>
 
   <div class="item item-body">
@@ -109,16 +110,32 @@
       <div class="col">
           <img ng-src="{{package.img}}">
             <p>
-              <p>&nbsp;</p>
-              <strong>Sender: </strong> {{package.senderAddr}} <br/>
-              <strong>Receiver: </strong> {{package.receiverAddr}} <br/>
-              <!-- <p>&nbsp;</p> -->
-              <strong>Signed Delivery: </strong> {{package.confirm}} <br/>
-              <strong>Fragile: </strong> {{package.fragile}} <br/>
-              <p>&nbsp;</p>
-              <strong>Instructions: </strong> {{package.instructions}} <br/>
 
+              <div class="row"> 
+                  <div class="col"><strong>Sender: </strong> </div>
+                  <div class="col"> {{package.senderAddr}} </div>
+              </div>
 
+              <div class="row"> 
+                  <div class="col"> <strong>Receiver: </strong>  </div>
+                  <div class="col"> {{package.receiverAddr}} </div>
+              </div>
+
+              <div class="row"> 
+                  <div class="col"> <strong>Fragile: </strong>  </div>
+                  <div class="col"> No </div>
+              </div>
+
+              <div class="row"> 
+                  <div class="col"> <strong>Signed Delivery: </strong>  </div>
+                  <div class="col"> Yes </div>
+              </div>
+
+              <div class="row"> 
+                  <div class="col"> <strong>Instructions: </strong>  </div>
+                  <div class="col">  {{package.instructions}} </div>
+              </div>
+             
             <!-- This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
             the content is from a card-body consisting of an image and paragraph text. The footer
             consists of tabs, icons aligned left, within the card-footer. -->
