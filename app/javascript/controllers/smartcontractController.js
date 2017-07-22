@@ -10,6 +10,7 @@ app.controller('SmartContractController', function ($scope, $ionicModal, $ionicS
     $scope.refreshContractBalance = function() {
          DappService.refreshBalanceFromBlockchain('smartContract');
         $scope.contractBalance = getSmartContractBalance();
+        $scope.date = new Date();
         console.log('Refreshing Smart Contract Balance',$scope.contractBalance);
     }
 
