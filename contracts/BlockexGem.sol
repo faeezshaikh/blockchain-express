@@ -47,6 +47,15 @@ contract BlockexGem {
         }
     }
 
+    // Will be called by the IoT device if the package is not delivered within the stipulated time.
+    function refund(address pkgOwner,uint pkgAmt) public returns (bool success) {
+            if (balances[this] < pkgAmt) return; 
+            balances[this] -= pkgAmt;
+            balances[pkgOwner] += pkgAmt;
+            PackageDelivered(pkgOwner,pkgAmt);
+            return true;
+    }
+
     function send(address receiver, uint amount) public returns (bool success) {
         if (balances[msg.sender] < amount) return;
         balances[msg.sender] -= amount;
