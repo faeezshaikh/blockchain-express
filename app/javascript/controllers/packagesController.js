@@ -118,7 +118,7 @@ app.controller('PackagesController', function ($scope, $ionicModal, $ionicScroll
             'img': 'http://www.elllo.org/Assets/images/P0351/374-Marion-Package.jpg',
             'id': 0,
             'miles': 300,
-            'status': 'ready'
+            'status': 'Ready'
             // 'cost': 0 
         };
     }

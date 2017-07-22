@@ -15,7 +15,7 @@
 
   <ion-content class="padding" delegate-handle="pkgDetailspage">
 
-    <div class="list" ng-show="package.status == 'Ready'">
+    <div class="list" ng-hide="package.status == 'In Transit'">
       <!--Image Starts -->
       <div class="text-center" ng-hide="imageData" ng-click="autoFill()">
         <img  class="full-image" ng-src="{{package.img}}" style="width:50%;height:50%">
@@ -100,9 +100,9 @@
 
   <div class="item item-avatar">
     <img ng-src="{{package.img}}">
-    <h2>Marty McFly</h2>
+    <h2>{{package.senderAddr}}</h2>
     <!-- <p>November 05, 1955</p> -->
-    <p>Payout: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; 55 </strong> </p>
+    <p>Payout: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; {{package.gems}} </strong> </p>
   </div>
 
   <div class="item item-body">
