@@ -7,7 +7,7 @@
 
   <ion-nav-buttons side="right">
     <button class="button" ng-click="balanceClicked()">
-          Balance: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp {{getBalance() | number:2}} </strong>
+          My Balance: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp {{getBalance() | number:2}} </strong>
       </button>
   </ion-nav-buttons>
 
@@ -51,6 +51,11 @@
               <input ng-model="package.receiverAddr" type="text" placeholder="Full Name">
             </label>
 
+             <label class="item item-input item-stacked-label">
+              <span class="input-label">Phone*&nbsp;<small ng-show="" style="font-size:50%">Some validation</small></span>
+              <input ng-model="package.recieverPhone" type="text" placeholder="Full Name">
+            </label>
+
       <div class="item item-divider">
         Instructions
       </div>
@@ -59,7 +64,6 @@
                       <div class="col col-50">
                         <span class="input-label">Signed Delivery Required?</span>
                         <p></p>
-                        <small  style="font-size:50%">Turn off to enter Address</small>
                       </div>
                       <div class="col col-50">
                         <label class="toggle pull-right">

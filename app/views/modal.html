@@ -1,14 +1,15 @@
 <ion-modal-view>
   <ion-header-bar class="bar-positive">
-    <h1 class="title">Add New Package for Pickup</h1>
+    <h1 class="title">Add</h1>
+      
+      <button class="button pull-right" ng-click="balanceClicked()">
+         My Balance <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp {{getBalance() | number:2}} </strong>
+      </button>
   </ion-header-bar>
 
 
   <ion-content class="padding" delegate-handle="show-page">
     <div class="list">
-
-
-
       <!--Image Starts -->
       <div class="text-center" ng-hide="imageData" ng-click="autoFill()">
         <img  class="full-image" ng-src="{{imgUrl}}" style="width:50%;height:50%">
@@ -30,7 +31,7 @@
       <p></p>
 
 
-      <div class="item item-divider">
+      <!-- <div class="item item-divider">
         Sender Info
       </div>
       <label class="item item-input item-stacked-label">
@@ -38,11 +39,6 @@
               <input ng-model="form.senderAddr" type="text" placeholder="Full Address">
             </label>
 
-      <!--
-            <label class="item item-input item-stacked-label">
-                    <span class="input-label">DOB*&nbsp;</span>
-                          <input type="date" placeholder="MM/DD/YYYY" ng-model="form.dob">
-            </label>-->
 
       <label class="item item-input item-stacked-label">
               <span class="input-label">Phone&nbsp;<small  style="font-size:50%">Min 10 chars</small></span>
@@ -53,7 +49,7 @@
       <label class="item item-input item-stacked-label">
               <span class="input-label">Email&nbsp;</span>
               <input ng-model="form.senderEmail" type="email" placeholder="someone@gmail.com"></textarea>
-            </label>
+            </label> -->
 
 
 

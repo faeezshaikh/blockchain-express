@@ -20,7 +20,7 @@ app.controller("PackageDetailsController", function ($scope, DappService, $state
     $scope.confirmPickup = function () {
         var confirmPopup = $ionicPopup.confirm({
             title: 'Confirm Pick up',
-            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; ' + escrow + ' tokens from your account and deposit them to the Smart Contract (Escrow)'
+            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; ' + escrow + ' tokens from your account and deposit them to the BlockEx Smart Contract'
         });
         confirmPopup.then(function (res) {
             if (res) {
@@ -48,7 +48,7 @@ app.controller("PackageDetailsController", function ($scope, DappService, $state
     $scope.confirmDelivery = function () {
         var confirmPopup = $ionicPopup.confirm({
             title: 'Confirm Delivery',
-            template: 'This will transfer <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + pkg.gems + ' x 2 = ' + pkg.gems*2 + ' tokens from the Smart Contract (Escrow) to the Carrier.'
+            template: 'This will transfer <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + pkg.gems + ' x 2 = ' + pkg.gems*2 + ' tokens from the BlockEx Smart Contract to the Carrier.'
         });
         confirmPopup.then(function (res) {
             if (res) {
