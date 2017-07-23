@@ -18,4 +18,10 @@ app.controller('SmartContractController', function ($scope, $ionicModal, $ionicS
         return DappService.getSmartContractBalance();
     }
 
+      $scope.getBalance = function () {
+        console.log('Balance is :', DappService.getBalance());
+        return DappService.getBalance();
+    }
+
+
 });

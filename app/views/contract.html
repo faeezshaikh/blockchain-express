@@ -1,5 +1,11 @@
 <ion-view view-title="BlockEx Smart Contract">
 
+
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="balanceClicked()">
+          My Balance: <strong><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp {{getBalance() | number:2}} </strong>
+      </button>
+  </ion-nav-buttons>
   <ion-content delegate-handle="">
 
        <div class="list card">
