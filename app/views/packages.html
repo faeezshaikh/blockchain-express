@@ -34,8 +34,11 @@
       <span class="badge badge-balanced" ng-show="package.status == 'Delivered'">Delivered</span> 
       <h2>Destination: {{package.receiverAddr}}</h2>
       <p>Pickup: {{package.senderAddr}}</p>
-      <p>Sender: {{package.senderPhone}} <i class="ion-ios-telephone-outline" style="color:blueviolet;"></i></p>
-      <p>Reward: <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;{{package.gems}} / <i class="ion-social-usd"></i>&nbsp;{{package.gems/10 | number:2}} &nbsp;<i ng-show="{{package.gems>50}}" class="ion-fireball" style="color:red;"></i></p>
+      <p>Sender: {{package.senderPhone}} <i class="ion-android-phone-portrait" style="color:blueviolet;"></i></p>
+      <p>Reward: <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;{{package.gems}} / 
+                  <i class="ion-social-usd"></i>&nbsp;{{package.gems/10 | number:2}} &nbsp;<i ng-show="{{package.gems>40}}" class="ion-fireball" style="color:red;"></i>
+                  <i ng-show="{{package.status == 'In Transit'}}" class="ion-arrow-graph-up-right larger" style="color:blue;"></i>
+      </p>
       <p>Distance: <i class="ion-ios-navigate-outline"></i>&nbsp;{{package.miles}} miles away</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
