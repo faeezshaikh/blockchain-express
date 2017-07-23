@@ -65,7 +65,7 @@ app.controller('PackagesController', function ($scope, $ionicModal, $ionicScroll
     function confirmPurchase() {
         var confirmPopup = $ionicPopup.confirm({
             title: 'Confirm Purchase',
-            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + $scope.form.gems + ' BlockEx gems from your account.'
+            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + $scope.form.gems + ' tokens from your account.'
         });
         confirmPopup.then(function (res) {
             if (res) {
@@ -118,7 +118,7 @@ app.controller('PackagesController', function ($scope, $ionicModal, $ionicScroll
             'img': 'http://www.elllo.org/Assets/images/P0351/374-Marion-Package.jpg',
             'id': 0,
             'miles': 300,
-            'status': 'Ready'
+            'status': 'ready'
             // 'cost': 0 
         };
     }

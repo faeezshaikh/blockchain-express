@@ -20,7 +20,7 @@ app.controller("PackageDetailsController", function ($scope, DappService, $state
     $scope.confirmPickup = function () {
         var confirmPopup = $ionicPopup.confirm({
             title: 'Confirm Pick up',
-            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; ' + escrow + ' BlockEx gems from your account and deposit them to the Smart Contract (Escrow)'
+            template: 'This will debit <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp; ' + escrow + ' tokens from your account and deposit them to the Smart Contract (Escrow)'
         });
         confirmPopup.then(function (res) {
             if (res) {
@@ -29,6 +29,7 @@ app.controller("PackageDetailsController", function ($scope, DappService, $state
                 DappService.updatePackage(pkg);
                 $ionicScrollDelegate.$getByHandle('pkgDetailspage').scrollTop(true);
                 toastr.success('Pickup added to Blockchain!', 'Transation successfully mined.');
+                $scope.$apply();
                 console.log('You are sure');
             } else {
                 console.log('You are not sure');
@@ -47,7 +48,7 @@ app.controller("PackageDetailsController", function ($scope, DappService, $state
     $scope.confirmDelivery = function () {
         var confirmPopup = $ionicPopup.confirm({
             title: 'Confirm Delivery',
-            template: 'This will transfer <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + pkg.gems + ' x 2 = ' + pkg.gems*2 + ' BlockEx gems from the Smart Contract (Escrow) to the Carrier.'
+            template: 'This will transfer <i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;' + pkg.gems + ' x 2 = ' + pkg.gems*2 + ' tokens from the Smart Contract (Escrow) to the Carrier.'
         });
         confirmPopup.then(function (res) {
             if (res) {

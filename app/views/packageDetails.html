@@ -14,7 +14,7 @@
 
   <ion-content class="padding" delegate-handle="pkgDetailspage">
 
-    <div class="list" ng-hide="package.status == 'In Transit'">
+    <div class="list" ng-show="package.status == 'Ready' || package.status == 'ready' || package.status == 'Delivered'">
       <!--Image Starts -->
       <div class="text-center" ng-hide="imageData" ng-click="autoFill()">
         <img class="full-image" ng-src="{{package.img}}" style="width:50%;height:50%">
@@ -145,9 +145,6 @@
         <!-- <img class="full-image" src="http://automallindia.in/yahoo_site_admin/assets/images/Track_Map.212120829_std.png"> -->
 
         <div class="center row">
-          <div ng-show="{{package.status == 'Ready'}}" class="col">
-            <button class="button button-block button-positive" ng-click="confirmPickup()">Pick Up</button>
-          </div>
           <div ng-show="{{package.status == 'In Transit'}}" class="col">
             <button class="button button-block button-assertive" ng-click="confirmDelivery()">Confirm Delivery</button>
           </div>
