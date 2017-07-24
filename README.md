@@ -1,4 +1,4 @@
-# blockchain-express
+# Blockchain-Express
 
 ## Built in 24 hrs during the 2017 T-REX Distributed Trade Hackathon in St. Louis.
 
